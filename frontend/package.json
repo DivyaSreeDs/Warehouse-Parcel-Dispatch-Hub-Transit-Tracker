@@ -1,0 +1,18 @@
+{
+  "name": "warehouse-hub-transit-tracker-frontend",
+  "version": "1.0.0",
+  "description": "Warehouse Parcel Dispatch & Hub Transit Tracker Frontend Console",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js 3000",
+    "dev": "node server.js 3000"
+  },
+  "keywords": [
+    "logistics",
+    "warehouse",
+    "transit-tracker",
+    "dispatch"
+  ],
+  "author": "Warehouse Logistics Frontend Team",
+  "license": "ISC"
+}

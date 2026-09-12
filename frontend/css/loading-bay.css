@@ -1,0 +1,386 @@
+/**
+ * Warehouse Parcel Dispatch & Hub Transit Tracker
+ * Loading Bay Split-Screen Styles
+ */
+
+.loading-bay-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .loading-bay-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bay-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.van-picker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 4px 12px;
+}
+
+.picker-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Bay Panels Common */
+.bay-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.panel-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.panel-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* Left Side: Manual Add Bar */
+.manual-add-card {
+  padding: 16px 24px;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.manual-add-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.manual-add-form {
+  display: flex;
+  gap: 10px;
+}
+
+/* Left Side: Filter Bar */
+.parcels-filter-bar {
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 180px;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 10px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-input-wrap .form-control {
+  padding-left: 32px;
+  background: var(--bg-surface-elevated);
+}
+
+.zone-filter-pills {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-pill {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.filter-pill.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* Parcels Table Container */
+.parcels-table-scroll {
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.zone-match-highlight {
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.empty-parcels-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 10px;
+}
+
+/* Right Side: Selected Van Card */
+.selected-van-banner {
+  padding: 24px;
+  background: linear-gradient(180deg, var(--bg-surface-elevated) 0%, var(--bg-surface) 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.van-banner-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.van-plate-hero {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.van-name-hero {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.van-banner-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Capacity Visualizer */
+.capacity-visualizer-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+
+.capacity-stats-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-sub {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.stat-main {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-divider {
+  font-size: 20px;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.capacity-gauge-track {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.capacity-gauge-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1), background-color 400ms ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.capacity-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12.5px;
+}
+
+.capacity-calc-sample {
+  color: var(--text-secondary);
+}
+
+.remaining-highlight {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+/* Right Side: Manifest */
+.manifest-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.manifest-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.manifest-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.manifest-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.locked-manifest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.manifest-table-scroll {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.empty-manifest-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 8px;
+}
+
+/* Dispatch Button */
+.manifest-footer-action {
+  padding: 20px 24px;
+  background: var(--bg-surface-elevated);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+}
+
+.btn-dispatch-van {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  border: 1px solid #10b981;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-dispatch-van:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857 0%, #059669 100%);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
+}
+
+.dispatched-trip-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  color: #34d399;
+}
+
+.dispatched-trip-notice p {
+  font-size: 12px;
+  color: #a7f3d0;
+  margin-top: 2px;
+}
