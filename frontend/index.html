@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Warehouse Parcel Dispatch & Hub Transit Tracker - Logistics Hub Console for Manual Intake, Van Loading Bay, Capacity Management, and Atomic Dispatch." />
+  <title>Transit Tracker | Warehouse Hub Dispatch Console</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/loading-bay.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Top Hub Navigation Bar -->
+    <header id="hub-navbar" class="hub-navbar"></header>
+
+    <!-- Main Dynamic Screen Container -->
+    <main id="main-content" class="main-container" role="main">
+      <div class="loading-spinner-state">
+        <div class="hub-spinner"></div>
+        <p>Loading Logistics Hub Console...</p>
+      </div>
+    </main>
+
+    <!-- Global Floating Toast Notification Stack -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Dispatch Confirmation Modal Dialog -->
+    <div id="dispatch-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-heading">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h2 id="modal-heading" class="modal-title">Confirm Vehicle Dispatch</h2>
+          <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body" id="dispatch-modal-body">
+          <!-- Dynamic details injected by dispatchModal.js -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-dispatch">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-dispatch-van" id="btn-confirm-dispatch">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Confirm &amp; Dispatch
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Entrypoint -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
